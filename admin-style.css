@@ -1,0 +1,656 @@
+:root {
+  --bg-color: #FFFFFF;
+  --primary-color: #EB5757;
+  --text-color: #333333;
+  --hover-color: #F2C94C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  margin: auto;
+  width: 1130px;
+}
+
+header {
+  width: 1130px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  margin: auto;
+
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center the items horizontally */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#nav-inner1 {
+  flex: 1;
+  text-align: left;
+}
+
+
+#nav-inner2 {
+  flex: 2;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+#nav-inner3 {
+  flex: 1;
+}
+
+#logo {
+  width: 45px;
+  height: 45px;
+}
+
+#nav-inner-inner1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+#nav-inner-inner3 img {
+  margin-right: 28px;
+  width: 20px;
+  height: 20px;
+}
+
+
+#logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+ol {
+  list-style: none;
+  cursor: pointer;
+}
+
+li {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+
+}
+
+.default-color {
+  color: var(--primary-color)
+}
+
+.active a {
+  color: var(--primary-color);
+}
+
+#list1 {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+#nav-inner-inner3 {
+  display: flex;
+
+  margin-left: 153px;
+  align-items: center;
+}
+
+.get-started-btn {
+  color: white;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  height: 44px;
+  width: 129px;
+  font-size: 14px;
+  border: none;
+  border-radius: 27px;
+
+}
+
+.get-start:hover {
+  background-color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+  cursor: pointer;
+  color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.border-animation {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.border-animation::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  cursor: default;
+  transition: width 0.3s;
+}
+
+.active-border::after {
+  width: 100%;
+  cursor: default;
+}
+
+.border-animation:hover::after {
+  width: 100%;
+  cursor: default;
+}
+
+
+/* Admin Side Styling */
+.panel {
+  color: var(--primary-color);
+  position: absolute;
+}
+
+.panel:hover {
+  color: var(--hover-color);
+}
+
+.title {
+  margin: auto;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.dashboard {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  background-color: #f9f9f9;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1065px;
+}
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .1px solid gray;
+  border-radius: 5px;
+  margin: 6px;
+  padding: 10px;
+  text-align: center;
+  height: 140px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box .p {
+  border: 1px solid var(--text-color);
+  padding: 15px;
+  width: 170px;
+  color: var(--primary-color);
+  border-radius: 5px;
+  background-color: rgba(235, 87, 87, 0.1);
+  margin-top: 10px;
+}
+
+.box .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  width: 120px;
+  font-weight: bolder;
+}
+
+
+
+/* Style for the form container */
+.add-products {
+  padding: 35px;
+  margin: 112px auto;
+  height: 369px;
+  max-width: 492px;
+  background-color: #f9f9f9;
+  padding-bottom: 58px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the form title */
+.add-products h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.add-products select option {
+  color: #333;
+}
+
+/* Style for the form inputs */
+.add-products input[type="text"],
+.add-products input[type="number"],
+.add-products input[type="file"],
+.add-products select {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 23px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the form inputs */
+.add-products input[type="text"],
+.add-products input[type="number"],
+.add-products input[type="file"],
+.add-products input[type="submit"],
+.add-products select {
+  font-size: 14px;
+}
+
+.add-products select {
+  width: 493px;
+}
+
+.add-products input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 210px;
+  cursor: pointer;
+}
+
+.add-products input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for error messages */
+.add-products .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+
+
+/* Edit secion styling */
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.edit-product-form {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 1px solid darkgray;
+  margin: 112px auto;
+  height: 399px;
+  position: absolute;
+  top: 0px;
+  max-width: 191px;
+  background-color: #f9f9f9;
+  padding-bottom: 58px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-product-form:hover {
+  animation: pulsate 2s 1;
+}
+
+.add-products:hover {
+  animation: pulsate 2s 1;
+}
+
+
+/* Style for the form title */
+.edit-product-form h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Style for the form inputs */
+.edit-product-form input[type="text"],
+.edit-product-form input[type="number"],
+.edit-product-form input[type="file"] {
+  width: 88%;
+  padding: 8px;
+  margin-bottom: 17px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-product-form select {
+  width: 97.5%;
+  padding: 8px;
+  margin-bottom: 17px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the form inputs */
+.edit-product-form input[type="text"],
+.edit-product-form input[type="number"],
+.edit-product-form input[type="file"],
+.edit-product-form input[type="submit"],
+.edit-product-form select {
+  font-size: 14px;
+}
+
+.edit-product-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 75px;
+  cursor: pointer;
+}
+
+.edit-product-form input[type="reset"] {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 77px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.edit-product-form input[type="reset"]:hover {
+  background-color: #c0392b;
+}
+
+.edit-product-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for error messages */
+.edit-product-form .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.title-shop-products {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.show-products {
+  margin-bottom: 50px;
+}
+
+.show-products .box-container .card-1 img {
+  height: 180px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+}
+
+.show-products .box-container .card-1 .price {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.show-products .box-container .card-1 .name {
+  margin: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.show-products .box-container .card-1 {
+  box-shadow: 0 8px 8px 0 rgba(0.1, 0.1, 0.1, 0.2);
+  max-width: 209px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+  margin: 20px;
+}
+
+/* CSS for the fancy link style */
+.fancy-link {
+  display: inline-block;
+  padding: 8px 21px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fancy-link:hover {
+  background-color: #2980b9;
+
+}
+
+.option-btn {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.empty:hover {
+  color: #c0392b;
+}
+
+.orders {
+  padding: 35px;
+  margin: 112px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1102px;
+  background-color: #f9f9f9;
+  padding-bottom: 58px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.orders .box {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  height: 450px;
+  width: 378px;
+  margin: auto 10px 20px 10px;
+  margin-bottom: 20px;
+  /* Add margin between each box */
+  padding: 20px;
+  /* Add padding inside the box */
+  display: flex;
+  /* Use flexbox for alignment */
+  flex-direction: column;
+  /* Align items in a column */
+}
+
+.orders .box p {
+  margin: 0 0 10px;
+  /* Add spacing below each paragraph */
+  padding-bottom: 5px;
+  /* Add a line or spacing below each label */
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border below each label */
+  word-break: break-all;
+  /* Break long words */
+}
+
+
+
+.orders .box p:last-child {
+  margin-bottom: 0;
+  /* Remove bottom margin from the last paragraph */
+  padding-bottom: 0;
+  /* Remove bottom padding from the last paragraph */
+  border-bottom: none;
+  /* Remove bottom border from the last label */
+}
+
+
+
+
+.orders .box form {
+  margin-top: 10px;
+  /* Add margin between the content and the form */
+}
+
+.orders .box select {
+  padding: 5px 90px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.orders .box .option-btn {
+  padding: 6px 25px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.orders .box .delete-btn {
+  padding: 5px 25px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.orders .empty {
+  color: #555;
+}
+
+
+.users {
+  padding: 35px;
+  margin: 112px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1102px;
+  background-color: #f9f9f9;
+  padding-bottom: 58px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.users-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+
+}
+
+.users-box {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.users-box p {
+  margin: 0 0 10px;
+  /* Add spacing below each paragraph */
+  padding-bottom: 5px;
+  /* Add a line or spacing below each label */
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border below each label */
+}
+
+.users-box p:last-child {
+  margin-bottom: 0;
+  /* Remove bottom margin from the last paragraph */
+  padding-bottom: 0;
+  /* Remove bottom padding from the last paragraph */
+  border-bottom: none;
+  /* Remove bottom border from the last label */
+}
+
+
+.users-box p span {
+  font-weight: bold;
+  color: #333;
+}
